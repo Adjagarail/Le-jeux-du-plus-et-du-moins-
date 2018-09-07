@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <title>Le plus et le moins</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+      <script type="text/javascript">
+              var solution = Math.floor(Math.random() *100) + 1;
+              for (var i = 0; i < 6; i++)
+              {
+                var requete = prompt('Veuillez saisir une valeur comprise entre 0 et 100');
+                console.log(requete);
+                if(requete == solution)
+                {
+                  console.log('Bravo !!! La solution etait bien:'+ solution);
+                  console.log('Vous avez reuissi en\t'+i+'\tessai');
+                  break;
+                }
+                if(requete != solution)
+                {
+                  if(requete > solution)
+                  {
+                    console.log('Le nombre que vous avez donné est plus grand que celui choisi');
+                  }
+                  else
+                  {
+                    console.log('Le nombre que vous avez donné est plus petit que celui choisi');
+                  }
+                }
+              }
+              if(i == 6)
+              {
+                console.log('Game Over!!! La solution etait:'+solution);
+              }
+      </script>
+  </body>
+</html>
